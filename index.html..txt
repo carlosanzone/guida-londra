@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guida Londra 14–18 Febbraio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --accent: #1e88e5;
+      --soft: #f5f5f5;
+      --border: #e0e0e0;
+      --orange: #fb8c00;
+      --blue: #1e88e5;
+      --yellow: #fdd835;
+      --grey: #9e9e9e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.4;
+      padding: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 12px 10px 16px;
+      border-radius: 12px;
+      background: var(--soft);
+      margin-bottom: 12px;
+    }
+    header h1 {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+    header p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e3f2fd;
+      color: var(--accent);
+      margin-right: 4px;
+      margin-top: 4px;
+    }
+    .section {
+      margin-bottom: 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: #fff;
+    }
+    .section summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: #fafafa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section summary::-webkit-details-marker { display: none; }
+    .section summary span.label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section summary span.chevron {
+      font-size: 0.8rem;
+      color: #777;
+    }
+    .section-content {
+      padding: 10px 12px 12px;
+      font-size: 0.9rem;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+    .pill-blue { background: #e3f2fd; color: var(--blue); }
+    .pill-orange { background: #fff3e0; color: var(--orange); }
+    .pill-yellow { background: #fff9c4; color: #f9a825; }
+    .pill-grey { background: #eeeeee; color: #616161; }
+    .pill-green { background: #e8f5e9; color: #2e7d32; }
+    .sub {
+      margin-top: 6px;
+      margin-bottom: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    ul {
+      margin-left: 16px;
+      margin-top: 2px;
+      margin-bottom: 6px;
+    }
+    li { margin-bottom: 2px; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    a:hover { text-decoration: underline; }
+    .meta {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 4px;
+    }
+    .day-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .block {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Guida Londra 14–18 Febbraio</h1>
+  <p>Versione estesa, minimal, ottimizzata per smartphone.</p>
+  <div>
+    <span class="tag">Meteo integrato</span>
+    <span class="tag">Itinerari giorno per giorno</span>
+    <span class="tag">Trasporti</span>
+  </div>
+</header>
+
+<!-- METEO GENERALE -->
+<details class="section" open>
+  <summary>
+    <span class="label">🌦️ Meteo generale</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">Temperature tipiche</span>
+      <p>Giorno: 7–11°C • Sera/notte: 3–6°C • Percepite spesso più basse per vento e umidità.</p>
+    </div>
+    <div class="block">
+      <span class="sub">Pioggia</span>
+      <p>Piogge leggere e intermittenti. Ombrello compatto o k‑way sempre in zaino.</p>
+    </div>
+    <div class="block">
+      <span class="sub">Vento</span>
+      <p>Moderato, più forte vicino al Tamigi e in alto (Sky Garden).</p>
+    </div>
+    <div class="block">
+      <span class="sub">Cosa indossare</span>
+      <ul>
+        <li>Giacca calda impermeabile</li>
+        <li>Felpa o pile</li>
+        <li>Scarpe resistenti all’acqua</li>
+        <li>Scaldacollo o cappello leggero</li>
+        <li>Ombrello pieghevole</li>
+      </ul>
+    </div>
+    <div class="block">
+      <span class="sub">Cosa portare</span>
+      <ul>
+        <li>Powerbank (il freddo scarica prima)</li>
+        <li>Bustina impermeabile per telefono/documenti</li>
+        <li>Burrocacao</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- METEO GIORNO PER GIORNO -->
+<details class="section">
+  <summary>
+    <span class="label">📅 Meteo giorno per giorno</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <div class="day-title">14 Feb – Venerdì</div>
+      <span class="pill pill-orange">7–10°C</span>
+      <span class="pill pill-orange">Piogge leggere</span>
+      <span class="pill pill-blue">Vento moderato</span>
+      <p class="meta">Consiglio: giornata perfetta per musei.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">15 Feb – Sabato</div>
+      <span class="pill pill-blue">6–11°C</span>
+      <span class="pill pill-blue">Nuvoloso con schiarite</span>
+      <span class="pill pill-orange">Piogge brevi</span>
+      <p class="meta">Consiglio: ottima per foto e Sky Garden.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">16 Feb – Domenica</div>
+      <span class="pill pill-yellow">7–12°C</span>
+      <span class="pill pill-yellow">Variabile</span>
+      <span class="pill pill-orange">Pioggia debole sera</span>
+      <p class="meta">Consiglio: coprirsi per la crociera.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">17 Feb – Lunedì</div>
+      <span class="pill pill-grey">5–9°C</span>
+      <span class="pill pill-grey">Nuvoloso</span>
+      <span class="pill pill-orange">Piogge sparse</span>
+      <p class="meta">Consiglio: scarpe impermeabili.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">18 Feb – Martedì</div>
+      <span class="pill pill-blue">4–8°C</span>
+      <span class="pill pill-blue">Schiarite</span>
+      <span class="pill pill-blue">Vento leggero</span>
+      <p class="meta">Consiglio: perfetto per Hyde Park.</p>
+    </div>
+  </div>
+</details>
+
+<!-- METEO LIVE -->
+<details class="section">
+  <summary>
+    <span class="label">🔗 Meteo in tempo reale</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <p class="block">Controllare ogni giorno prima di uscire:</p>
+    <ul>
+      <li><a href="https://www.msn.com/en-gb/weather" target="_blank">MSN Weather (live)</a></li>
+      <li><a href="https://www.metoffice.gov.uk/weather/forecast" target="_blank">Met Office (UK ufficiale)</a></li>
+    </ul>
+  </div>
+</details>
+
+<!-- TRASPORTI -->
+<details class="section">
+  <summary>
+    <span class="label">🚐 Da Luton a South Kensington</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">1️⃣ Shuttle → Luton Airport Parkway</span>
+      <p>5–7 min • ogni 10 min • segui i cartelli “Shuttle Bus”.</p>
+    </div>
+    <div class="block">
+      <span class="sub">2️⃣ Thameslink → London St Pancras</span>
+      <p>25–35 min • treno moderno • paghi con contactless ai tornelli.</p>
+    </div>
+    <div class="block">
+      <span class="sub">3️⃣ Piccadilly Line → South Kensington</span>
+      <p>15–18 min • direzione Heathrow/Uxbridge • nessun cambio.</p>
+    </div>
+    <div class="block">
+      <span class="sub">4️⃣ A piedi → 121 Old Brompton Road</span>
+      <p>7–8 min • zona elegante e sicura, piena di caffè.</p>
+    </div>
+  </div>
+</details>
+
+<!-- VENERDÌ -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Venerdì 14 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-orange">7–10°C</span>
+      <span class="pill pill-orange">Piogge leggere</span>
+      <span class="pill pill-blue">Vento moderato</span>
+      <p class="meta">Consiglio: perfetto per musei. Giacca impermeabile.</p>
+    </div>
+    <div class="block">
+      <span class="sub">🦖 Natural History Museum – 17:00</span>
+      <p>10–12 min a piedi.</p>
+      <ul>
+        <li>Dinosauri</li>
+        <li>Balenottera azzurra</li>
+        <li>Vulcani & Terremoti</li>
+      </ul>
+    </div>
+    <div class="block">
+      <span class="sub">🛍️ Harrods – 18:00</span>
+      <p>12 min a piedi.</p>
+      <ul>
+        <li>Food Hall</li>
+        <li>Reparto giocattoli</li>
+      </ul>
+    </div>
+    <div class="block">
+      <span class="sub">⚽ Inter–Juve – 21:00 (Famous Three Kings)</span>
+      <p>20–25 min in metro • pub grande, atmosfera top • arrivare 10–15 min prima.</p>
+    </div>
+  </div>
+</details>
+
+<!-- SABATO -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Sabato 15 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-blue">6–11°C</span>
+      <span class="pill pill-blue">Nuvoloso con schiarite</span>
+      <span class="pill pill-orange">Piogge brevi pomeriggio</span>
+      <p class="meta">Consiglio: porta un k‑way, ottima per foto.</p>
+    </div>
+    <div class="block">
+      <span class="sub">🏛️ Westminster – 9:00</span>
+      <p>15–18 min in metro.</p>
+      <ul>
+        <li>Big Ben</li>
+        <li>Parliament</li>
+        <li>Westminster Abbey</li>
+        <li>Foto sul ponte con London Eye</li>
+      </ul>
+    </div>
+    <div class="block">
+      <span class="sub">🌆 Sky Garden – 13:45</span>
+      <p>20–25 min in metro • vista panoramica • giardino interno.</p>
+    </div>
+    <div class="block">
+      <span class="sub">🎎 Soho / Chinatown / Piccadilly – 15:00</span>
+      <p>15 min in metro.</p>
+      <ul>
+        <li>Street food</li>
+        <li>Negozi particolari</li>
+        <li>Foto a Piccadilly Circus</li>
+      </ul>
+    </div>
+    <div class="block">
+      <span class="sub">🚤 Crociera Tamigi – 20:00</span>
+      <p>Partenza da Westminster Pier • lato sinistro = vista migliore.</p>
+    </div>
+  </div>
+</details>
+
+<!-- DOMENICA -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Domenica 16 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-yellow">7–12°C</span>
+      <span class="pill pill-yellow">Variabile</span>
+      <span class="pill pill-orange">Pioggia debole sera</span>
+      <p class="meta">Consiglio: coprirsi bene per la crociera.</p>
+    </div>
+    <div class="block">
+      <span class="sub">🚉 King’s Cross – 9:00</span>
+      <p>20–25 min in metro.</p>
+      <ul>
+        <li>Binario 9¾</li>
+        <li>Negozio Harry Potter</li>
+      </ul>
+    </div>
+    <div class="block">
+      <span class="sub">🎨 Brick Lane / Shoreditch – 11:00</span>
+      <p>20 min in metro • street art • vintage.</p>
+    </div>
+    <div class="block">
+      <span class="sub">🏘️ Portobello Road – 15:00</span>
+      <p>30–35 min in metro • case colorate • mercatini.</p>
+    </div>
+  </div>
+</details>
+
+<!-- LUNEDÌ -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Lunedì 17 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-grey">5–9°C</span>
+      <span class="pill pill-grey">Nuvoloso</span>
+      <span class="pill pill-orange">Piogge sparse</span>
+      <p class="meta">Consiglio: scarpe impermeabili.</p>
+    </div>
+    <div class="block">
+      <span class="sub">🌳 Hyde Park – mattina</span>
+      <p>10–12 min a piedi.</p>
+      <ul>
+        <li>Kensington Gardens</li>
+        <li>Serpentine Lake</li>
+        <li>Italian Gardens</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- MARTEDÌ -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Martedì 18 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-blue">4–8°C</span>
+      <span class="pill pill-blue">Schiarite</span>
+      <span class="pill pill-blue">Vento leggero</span>
+      <p class="meta">Consiglio: perfetto per Hyde Park.</p>
+    </div>
+    <div class="block">
+      <span class="sub">🧳 Check‑out – 9:00</span>
+      <p>Preparare valigie con margine, controllare meteo e traffico verso l’aeroporto.</p>
+    </div>
+  </div>
+</details>
+
+</body>
+</html>
