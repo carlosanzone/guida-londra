@@ -526,9 +526,89 @@
 
   </div>
 </details>
+<!-- ========================= -->
+<!--   CONTAPASSI INTEGRATO    -->
+<!-- ========================= -->
+
+<details class="section">
+  <summary>
+    <span class="label">🚶‍♂️ Contapassi</span>
+    <span class="chevron">▼</span>
+  </summary>
+
+  <div class="section-content">
+    <p>Attiva il contapassi per vedere quanti passi fai oggi.</p>
+
+    <div class="block">
+      <span class="sub">Passi di oggi</span>
+      <p id="steps">0</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">Distanza stimata</span>
+      <p id="distance">0 km</p>
+    </div>
+
+    <button id="startStepCounter" style="
+      padding:10px 16px;
+      border-radius:10px;
+      background:#0078ff;
+      color:white;
+      border:none;
+      font-size:16px;
+      margin-top:10px;
+    ">
+      ▶️ Attiva contapassi
+    </button>
+
+    <p class="meta">Il contapassi funziona solo mentre tieni la pagina aperta.</p>
+  </div>
+</details>
+
+<script>
+let steps = 0;
+let lastPeak = 0;
+
+function estimateSteps(acceleration) {
+  const threshold = 12; // sensibilità
+  const now = Date.now();
+
+  if (acceleration > threshold && now - lastPeak > 400) {
+    steps++;
+    lastPeak = now;
+    document.getElementById("steps").innerText = steps;
+    document.getElementById("distance").innerText = (steps * 0.0008).toFixed(2) + " km";
+  }
+}
+
+document.getElementById("startStepCounter").addEventListener("click", () => {
+  if (typeof DeviceMotionEvent.requestPermission === "function") {
+    DeviceMotionEvent.requestPermission().then(permission => {
+      if (permission === "granted") {
+        window.addEventListener("devicemotion", event => {
+          const acc = event.accelerationIncludingGravity;
+          if (acc) {
+            const total = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z * acc.z);
+            estimateSteps(total);
+          }
+        });
+      }
+    });
+  } else {
+    window.addEventListener("devicemotion", event => {
+      const acc = event.accelerationIncludingGravity;
+      if (acc) {
+        const total = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z * acc.z);
+        estimateSteps(total);
+      }
+    });
+  }
+});
+</script>
 
 
 </html>
+
 
 
 
