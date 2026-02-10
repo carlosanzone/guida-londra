@@ -873,6 +873,11 @@ document.getElementById("resetSteps").addEventListener("click", () => {
   steps = 0;
   updateUI();
 });
+document.getElementById("resetTotalSteps").addEventListener("click", () => {
+  totalSteps = 0;
+  updateUI();
+});
+  
 </script>
 
 
@@ -902,8 +907,9 @@ document.getElementById("resetSteps").addEventListener("click", () => {
 <!-- ========================= -->
 <script>
 let steps = 0;
-let totalSteps = 0;
+let totalSteps = Number(localStorage.getItem("totalSteps")) || 0;
 let lastPeak = 0;
+
 
 function updateUI() {
   document.getElementById("steps").innerText = steps;
@@ -911,7 +917,11 @@ function updateUI() {
 
   document.getElementById("totalSteps").innerText = totalSteps;
   document.getElementById("totalDistance").innerText = (totalSteps * 0.0008).toFixed(2) + " km";
+
+  // Salva i passi totali
+  localStorage.setItem("totalSteps", totalSteps);
 }
+
 
 function estimateSteps(acceleration) {
   const threshold = 12;
@@ -953,10 +963,17 @@ document.getElementById("resetSteps").addEventListener("click", () => {
   steps = 0;
   updateUI();
 });
+document.getElementById("resetTotalSteps").addEventListener("click", () => {
+  totalSteps = 0;
+  localStorage.setItem("totalSteps", 0);
+  updateUI();
+});
+  
 </script>
 
 </body>
 </html>
+
 
 
 
