@@ -537,7 +537,7 @@
   </summary>
 
   <div class="section-content">
-    <p>Attiva il contapassi per vedere quanti passi fai oggi.</p>
+    <p>Attiva il contapassi per vedere quanti passi fai oggi e il totale del viaggio.</p>
 
     <div class="block">
       <span class="sub">Passi di oggi</span>
@@ -545,8 +545,18 @@
     </div>
 
     <div class="block">
-      <span class="sub">Distanza stimata</span>
+      <span class="sub">Distanza di oggi</span>
       <p id="distance">0 km</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">Totale passi del viaggio</span>
+      <p id="totalSteps">0</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">Totale km del viaggio</span>
+      <p id="totalDistance">0 km</p>
     </div>
 
     <button id="startStepCounter" style="
@@ -567,17 +577,26 @@
 
 <script>
 let steps = 0;
+let totalSteps = 0;
 let lastPeak = 0;
 
+function updateUI() {
+  document.getElementById("steps").innerText = steps;
+  document.getElementById("distance").innerText = (steps * 0.0008).toFixed(2) + " km";
+
+  document.getElementById("totalSteps").innerText = totalSteps;
+  document.getElementById("totalDistance").innerText = (totalSteps * 0.0008).toFixed(2) + " km";
+}
+
 function estimateSteps(acceleration) {
-  const threshold = 12; // sensibilità
+  const threshold = 12;
   const now = Date.now();
 
   if (acceleration > threshold && now - lastPeak > 400) {
     steps++;
+    totalSteps++;
     lastPeak = now;
-    document.getElementById("steps").innerText = steps;
-    document.getElementById("distance").innerText = (steps * 0.0008).toFixed(2) + " km";
+    updateUI();
   }
 }
 
@@ -607,7 +626,10 @@ document.getElementById("startStepCounter").addEventListener("click", () => {
 </script>
 
 
+
+
 </html>
+
 
 
 
