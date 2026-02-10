@@ -236,17 +236,656 @@
   </div>
 </details>
 
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guida Londra 14–18 Febbraio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --accent: #1e88e5;
+      --soft: #f5f5f5;
+      --border: #e0e0e0;
+      --orange: #fb8c00;
+      --blue: #1e88e5;
+      --yellow: #fdd835;
+      --grey: #9e9e9e;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.4;
+      padding: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 12px 10px 16px;
+      border-radius: 12px;
+      background: var(--soft);
+      margin-bottom: 12px;
+    }
+    header h1 {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+    header p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e3f2fd;
+      color: var(--accent);
+      margin-right: 4px;
+      margin-top: 4px;
+    }
+    .section {
+      margin-bottom: 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: #fff;
+    }
+    .section summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      background: #fafafa;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section summary::-webkit-details-marker { display: none; }
+    .section summary span.label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .section summary span.chevron {
+      font-size: 0.8rem;
+      color: #777;
+    }
+    .section-content {
+      padding: 10px 12px 12px;
+      font-size: 0.9rem;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+    }
+    .pill-blue { background: #e3f2fd; color: var(--blue); }
+    .pill-orange { background: #fff3e0; color: var(--orange); }
+    .pill-yellow { background: #fff9c4; color: #f9a825; }
+    .pill-grey { background: #eeeeee; color: #616161; }
+    .pill-green { background: #e8f5e9; color: #2e7d32; }
+    .sub {
+      margin-top: 6px;
+      margin-bottom: 4px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    ul {
+      margin-left: 16px;
+      margin-top: 2px;
+      margin-bottom: 6px;
+    }
+    li { margin-bottom: 2px; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    a:hover { text-decoration: underline; }
+    .meta {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 4px;
+    }
+    .day-title {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .block {
+      margin-top: 6px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Guida Londra 14–18 Febbraio</h1>
+  <p>Versione estesa, minimal, ottimizzata per smartphone.</p>
+  <div>
+    <span class="tag">Meteo integrato</span>
+    <span class="tag">Itinerari giorno per giorno</span>
+    <span class="tag">Trasporti</span>
+  </div>
+</header>
+
+<!-- METEO GENERALE -->
+<details class="section" open>
+  <summary>
+    <span class="label">🌦️ Meteo generale</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">Temperature tipiche</span>
+      <p>Giorno: 7–11°C • Sera/notte: 3–6°C • Percepite spesso più basse per vento e umidità.</p>
+    </div>
+    <div class="block">
+      <span class="sub">Pioggia</span>
+      <p>Piogge leggere e intermittenti. Ombrello compatto o k‑way sempre in zaino.</p>
+    </div>
+    <div class="block">
+      <span class="sub">Vento</span>
+      <p>Moderato, più forte vicino al Tamigi e in alto (Sky Garden).</p>
+    </div>
+    <div class="block">
+      <span class="sub">Cosa indossare</span>
+      <ul>
+        <li>Giacca calda impermeabile</li>
+        <li>Felpa o pile</li>
+        <li>Scarpe resistenti all’acqua</li>
+        <li>Scaldacollo o cappello leggero</li>
+        <li>Ombrello pieghevole</li>
+      </ul>
+    </div>
+    <div class="block">
+      <span class="sub">Cosa portare</span>
+      <ul>
+        <li>Powerbank (il freddo scarica prima)</li>
+        <li>Bustina impermeabile per telefono/documenti</li>
+        <li>Burrocacao</li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<!-- METEO GIORNO PER GIORNO -->
+<details class="section">
+  <summary>
+    <span class="label">📅 Meteo giorno per giorno</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <div class="day-title">14 Feb – Venerdì</div>
+      <span class="pill pill-orange">7–10°C</span>
+      <span class="pill pill-orange">Piogge leggere</span>
+      <span class="pill pill-blue">Vento moderato</span>
+      <p class="meta">Consiglio: giornata perfetta per musei.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">15 Feb – Sabato</div>
+      <span class="pill pill-blue">6–11°C</span>
+      <span class="pill pill-blue">Nuvoloso con schiarite</span>
+      <span class="pill pill-orange">Piogge brevi</span>
+      <p class="meta">Consiglio: ottima per foto e Sky Garden.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">16 Feb – Domenica</div>
+      <span class="pill pill-yellow">7–12°C</span>
+      <span class="pill pill-yellow">Variabile</span>
+      <span class="pill pill-orange">Pioggia debole sera</span>
+      <p class="meta">Consiglio: coprirsi per la crociera.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">17 Feb – Lunedì</div>
+      <span class="pill pill-grey">5–9°C</span>
+      <span class="pill pill-grey">Nuvoloso</span>
+      <span class="pill pill-orange">Piogge sparse</span>
+      <p class="meta">Consiglio: scarpe impermeabili.</p>
+    </div>
+    <div class="block">
+      <div class="day-title">18 Feb – Martedì</div>
+      <span class="pill pill-blue">4–8°C</span>
+      <span class="pill pill-blue">Schiarite</span>
+      <span class="pill pill-blue">Vento leggero</span>
+      <p class="meta">Consiglio: perfetto per Hyde Park.</p>
+    </div>
+  </div>
+</details>
+
+<!-- METEO LIVE -->
+<details class="section">
+  <summary>
+    <span class="label">🔗 Meteo in tempo reale</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <p class="block">Controllare ogni giorno prima di uscire:</p>
+    <ul>
+      <li><a href="https://www.msn.com/en-gb/weather" target="_blank">MSN Weather (live)</a></li>
+      <li><a href="https://www.metoffice.gov.uk/weather/forecast" target="_blank">Met Office (UK ufficiale)</a></li>
+    </ul>
+  </div>
+</details>
+
+<!-- TRASPORTI -->
+<details class="section">
+  <summary>
+    <span class="label">🚐 Da Luton a South Kensington</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <div class="block">
+      <span class="sub">1️⃣ Shuttle → Luton Airport Parkway</span>
+      <p>5–7 min • ogni 10 min • segui i cartelli “Shuttle Bus”.</p>
+    </div>
+    <div class="block">
+      <span class="sub">2️⃣ Thameslink → London St Pancras</span>
+      <p>25–35 min • treno moderno • paghi con contactless ai tornelli.</p>
+    </div>
+    <div class="block">
+      <span class="sub">3️⃣ Piccadilly Line → South Kensington</span>
+      <p>15–18 min • direzione Heathrow/Uxbridge • nessun cambio.</p>
+    </div>
+    <div class="block">
+      <span class="sub">4️⃣ A piedi → 121 Old Brompton Road</span>
+      <p>7–8 min • zona elegante e sicura, piena di caffè.</p>
+    </div>
+  </div>
+</details>
+<!-- MAPPA METRO DI LONDRA -->
+<details class="section">
+  <summary>
+    <span class="label">🗺️ Mappa Metro di Londra</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+    <p>Qui trovi la cartina completa della metropolitana di Londra.</p>
+    <img src="https://content.tfl.gov.uk/standard-tube-map.pdf" alt="Mappa Metro Londra" style="width:100%; border-radius:12px;">
+    <p>
+      <a href="https://content.tfl.gov.uk/standard-tube-map.pdf" target="_blank">
+        📍 Apri la mappa in alta qualità
+      </a>
+    </p>
+  </div>
+</details>
+
 <!-- ========================= -->
-<!--  TUTTO IL TUO CONTENUTO   -->
+<!--   ITINERARIO COMPLETO     -->
 <!-- ========================= -->
 
-<!-- (QUI RESTA TUTTO IDENTICO) -->
-<!-- Ho lasciato intatti: -->
-<!-- Meteo generale -->
-<!-- Meteo giorno per giorno -->
-<!-- Trasporti -->
-<!-- Itinerari Sabato → Mercoledì -->
-<!-- Contapassi (già aggiornato) -->
+<!-- SABATO 14 FEBBRAIO -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Sabato 14 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-orange">7–10°C</span>
+      <span class="pill pill-orange">Piogge leggere</span>
+      <span class="pill pill-blue">Vento moderato</span>
+      <p class="meta">Consiglio: perfetto per musei. Giacca impermeabile.</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">🦖 Natural History Museum – 17:00</span>
+      <p>10–12 min a piedi.</p>
+      <a href="https://www.google.com/maps/dir/121+Old+Brompton+Road,+London/Natural+History+Museum,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🛍️ Harrods – 18:00</span>
+      <p>12 min a piedi.</p>
+      <a href="https://www.google.com/maps/dir/Natural+History+Museum,+London/Harrods,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">⚽ Partita al pub – 21:00 (Hoop & Toy)</span>
+      <p>
+        Pub storico di South Kensington, a 5 minuti a piedi da casa.  
+        Perfetto per vedere la partita senza prendere la metro.
+      </p>
+      <a href="https://www.google.com/maps/dir/121+Old+Brompton+Road,+London/Hoop+%26+Toy,+34+Thurloe+Pl,+South+Kensington" target="_blank">📍 Apri percorso</a>
+    </div>
+
+  </div>
+</details>
+
+
+
+<!-- DOMENICA 15 FEBBRAIO -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Domenica 15 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-blue">6–11°C</span>
+      <span class="pill pill-blue">Nuvoloso con schiarite</span>
+      <span class="pill pill-orange">Piogge brevi pomeriggio</span>
+      <p class="meta">Consiglio: porta un k‑way, ottima per foto.</p>
+    </div>
+
+    <!-- BIG BEN AGGIUNTO QUI -->
+    <div class="block">
+      <span class="sub">🕰️ Big Ben – 9:00</span>
+      <p>È davanti a Westminster, perfetto per iniziare la giornata.</p>
+      <a href="https://www.google.com/maps/dir/121+Old+Brompton+Road,+London/Big+Ben,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🏛️ Westminster – 9:30</span>
+      <p>
+        Metro:<br>
+        • District Line (verde) → direzione Upminster → Westminster
+      </p>
+      <a href="https://www.google.com/maps/dir/Big+Ben,+London/Westminster,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🌆 Sky Garden – 13:45</span>
+      <p>
+        Metro:<br>
+        • District Line (verde) → Westminster → Monument
+      </p>
+      <a href="https://www.google.com/maps/dir/Westminster,+London/Sky+Garden,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <!-- TOWER BRIDGE AGGIUNTO QUI -->
+    <div class="block">
+      <span class="sub">🌉 Tower Bridge – 15:00</span>
+      <p>15 min a piedi dallo Sky Garden. Perfetto prima di Soho.</p>
+      <a href="https://www.google.com/maps/dir/Sky+Garden,+London/Tower+Bridge,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🎎 Soho / Chinatown / Piccadilly – 16:00</span>
+      <p>
+        Metro:<br>
+        • Northern Line (nera) → Bank → Leicester Square<br>
+        • Cambio<br>
+        • Piccadilly Line (blu) → Piccadilly Circus
+      </p>
+      <a href="https://www.google.com/maps/dir/Tower+Bridge,+London/Piccadilly+Circus,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🚤 Crociera Tamigi – 20:00</span>
+      <p>
+        Metro:<br>
+        • Bakerloo Line (marrone) → Piccadilly Circus → Embankment<br>
+        • 5 min a piedi per Westminster Pier
+      </p>
+      <a href="https://www.google.com/maps/dir/Piccadilly+Circus,+London/Westminster+Pier,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+  </div>
+</details>
+
+<!-- LUNEDÌ 16 FEBBRAIO -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Lunedì 16 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-yellow">7–12°C</span>
+      <span class="pill pill-yellow">Variabile</span>
+      <span class="pill pill-orange">Pioggia debole sera</span>
+      <p class="meta">Consiglio: coprirsi bene per la sera.</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">🚉 King’s Cross – 9:00</span>
+      <p>
+        Metro:<br>
+        • Piccadilly Line (blu) → direzione Cockfosters → King’s Cross
+      </p>
+      <a href="https://www.google.com/maps/dir/121+Old+Brompton+Road,+London/King's+Cross+Station,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🎨 Brick Lane / Shoreditch – 11:00</span>
+      <p>
+        Metro:<br>
+        • Hammersmith & City Line (rosa) → direzione Barking → Liverpool Street
+      </p>
+      <a href="https://www.google.com/maps/dir/King's+Cross+Station,+London/Brick+Lane,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <!-- CAMDEN TOWN AGGIUNTO QUI -->
+    <div class="block">
+      <span class="sub">🎪 Camden Town – 14:00</span>
+      <p>
+        Metro:<br>
+        • Northern Line (nera) → Liverpool Street → Camden Town
+      </p>
+      <a href="https://www.google.com/maps/dir/Brick+Lane,+London/Camden+Town,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🏘️ Portobello Road – 16:00</span>
+      <p>
+        Metro:<br>
+        • Northern Line → Camden Town → Tottenham Court Road<br>
+        • Cambio<br>
+        • Central Line (rossa) → Notting Hill Gate
+      </p>
+      <a href="https://www.google.com/maps/dir/Camden+Town,+London/Portobello+Road,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+  </div>
+</details>
+
+<!-- MARTEDÌ 17 FEBBRAIO -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Martedì 17 Feb</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+
+    <div class="block">
+      <span class="sub">🌦️ Meteo del giorno</span><br />
+      <span class="pill pill-grey">5–9°C</span>
+      <span class="pill pill-grey">Nuvoloso</span>
+      <span class="pill pill-orange">Piogge sparse</span>
+      <p class="meta">Consiglio: scarpe impermeabili.</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">🌳 Hyde Park – mattina</span>
+      <p>10–12 min a piedi dal vostro alloggio.</p>
+      <a href="https://www.google.com/maps/dir/121+Old+Brompton+Road,+London/Hyde+Park,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🏰 Kensington Palace – 14:00</span>
+      <p>All’interno di Hyde Park, 10 min a piedi dal lago.</p>
+      <a href="https://www.google.com/maps/dir/Hyde+Park,+London/Kensington+Palace,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">🌿 Italian Gardens – 15:00</span>
+      <p>Giardini scenografici con fontane, 8 min a piedi da Kensington Palace.</p>
+      <a href="https://www.google.com/maps/dir/Kensington+Palace,+London/Italian+Gardens,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+    <div class="block">
+      <span class="sub">👑 Buckingham Palace – 16:30</span>
+      <p>
+        Da Hyde Park Corner: 12–15 min a piedi.  
+        Perfetto per chiudere la giornata con foto davanti al palazzo reale.
+      </p>
+      <a href="https://www.google.com/maps/dir/Italian+Gardens,+London/Buckingham+Palace,+London" target="_blank">📍 Apri percorso</a>
+    </div>
+
+  </div>
+</details>
+
+
+<!-- MERCOLEDÌ 18 FEBBRAIO — PARTENZA -->
+<details class="section">
+  <summary>
+    <span class="label">📍 Mercoledì 18 Feb (Partenza)</span>
+    <span class="chevron">▼</span>
+  </summary>
+  <div class="section-content">
+
+    <div class="block">
+      <span class="sub">🧳 Check‑out – 9:00</span>
+      <p>
+        Per Luton:<br>
+        • Piccadilly Line → King’s Cross<br>
+        • Thameslink → Luton Airport Parkway<br>
+        • Shuttle → Terminal
+      </p>
+      <a href="https://www.google.com/maps/dir/121+Old+Brompton+Road,+London/Luton+Airport" target="_blank">📍 Apri percorso</a>
+    </div>
+
+  </div>
+</details>
+<!-- ========================= -->
+<!--   CONTAPASSI INTEGRATO    -->
+<!-- ========================= -->
+
+<details class="section">
+  <summary>
+    <span class="label">🚶‍♂️ Contapassi</span>
+    <span class="chevron">▼</span>
+  </summary>
+
+  <div class="section-content">
+    <p>Attiva il contapassi per vedere quanti passi fai oggi e il totale del viaggio.</p>
+
+    <div class="block">
+      <span class="sub">Passi di oggi</span>
+      <p id="steps">0</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">Distanza di oggi</span>
+      <p id="distance">0 km</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">Totale passi del viaggio</span>
+      <p id="totalSteps">0</p>
+    </div>
+
+    <div class="block">
+      <span class="sub">Totale km del viaggio</span>
+      <p id="totalDistance">0 km</p>
+    </div>
+
+    <button id="startStepCounter" style="
+      padding:10px 16px;
+      border-radius:10px;
+      background:#0078ff;
+      color:white;
+      border:none;
+      font-size:16px;
+      margin-top:10px;
+      width:100%;
+    ">
+      ▶️ Attiva contapassi
+    </button>
+
+    <button id="resetSteps" style="
+      padding:10px 16px;
+      border-radius:10px;
+      background:#ff3b30;
+      color:white;
+      border:none;
+      font-size:16px;
+      margin-top:10px;
+      width:100%;
+    ">
+      🔄 Azzera passi di oggi
+    </button>
+
+    <p class="meta">Il contapassi funziona solo mentre tieni la pagina aperta.</p>
+  </div>
+</details>
+
+<script>
+let steps = 0;
+let totalSteps = 0;
+let lastPeak = 0;
+
+function updateUI() {
+  document.getElementById("steps").innerText = steps;
+  document.getElementById("distance").innerText = (steps * 0.0008).toFixed(2) + " km";
+
+  document.getElementById("totalSteps").innerText = totalSteps;
+  document.getElementById("totalDistance").innerText = (totalSteps * 0.0008).toFixed(2) + " km";
+}
+
+function estimateSteps(acceleration) {
+  const threshold = 12;
+  const now = Date.now();
+
+  if (acceleration > threshold && now - lastPeak > 400) {
+    steps++;
+    totalSteps++;
+    lastPeak = now;
+    updateUI();
+  }
+}
+
+document.getElementById("startStepCounter").addEventListener("click", () => {
+  if (typeof DeviceMotionEvent.requestPermission === "function") {
+    DeviceMotionEvent.requestPermission().then(permission => {
+      if (permission === "granted") {
+        window.addEventListener("devicemotion", event => {
+          const acc = event.accelerationIncludingGravity;
+          if (acc) {
+            const total = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z * acc.z);
+            estimateSteps(total);
+          }
+        });
+      }
+    });
+  } else {
+    window.addEventListener("devicemotion", event => {
+      const acc = event.accelerationIncludingGravity;
+      if (acc) {
+        const total = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z * acc.z);
+        estimateSteps(total);
+      }
+    });
+  }
+});
+
+document.getElementById("resetSteps").addEventListener("click", () => {
+  steps = 0;
+  updateUI();
+});
+</script>
+
+
+
+
+</html>
 
 <!-- ========================= -->
 <!--     PULSANTE TORNA SU     -->
@@ -325,6 +964,7 @@ document.getElementById("resetSteps").addEventListener("click", () => {
 
 </body>
 </html>
+
 
 
 
