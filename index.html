@@ -816,9 +816,23 @@
       🔄 Azzera passi di oggi
     </button>
 
+    <button id="resetTotalSteps" style="
+      padding:10px 16px;
+      border-radius:10px;
+      background:#9e9e9e;
+      color:white;
+      border:none;
+      font-size:16px;
+      margin-top:10px;
+      width:100%;
+    ">
+      🧹 Azzera passi totali
+    </button>
+
     <p class="meta">Il contapassi funziona solo mentre tieni la pagina aperta.</p>
   </div>
 </details>
+
 
 <script>
 let steps = 0;
@@ -917,15 +931,14 @@ function updateUI() {
   document.getElementById("totalSteps").innerText = totalSteps;
   document.getElementById("totalDistance").innerText = (totalSteps * 0.0008).toFixed(2) + " km";
 
-  // Salva i passi totali
   localStorage.setItem("totalSteps", totalSteps);
 }
 
-function estimateSteps(acceleration) {
+function estimateSteps(acc) {
   const threshold = 12;
   const now = Date.now();
 
-  if (acceleration > threshold && now - lastPeak > 400) {
+  if (acc > threshold && now - lastPeak > 400) {
     steps++;
     totalSteps++;
     lastPeak = now;
@@ -934,24 +947,29 @@ function estimateSteps(acceleration) {
 }
 
 document.getElementById("startStepCounter").addEventListener("click", () => {
+
+  // iPhone (richiede permesso)
   if (typeof DeviceMotionEvent !== "undefined" &&
       typeof DeviceMotionEvent.requestPermission === "function") {
+
     DeviceMotionEvent.requestPermission().then(permission => {
       if (permission === "granted") {
         window.addEventListener("devicemotion", event => {
-          const acc = event.accelerationIncludingGravity;
-          if (acc) {
-            const total = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z * acc.z);
+          const a = event.accelerationIncludingGravity;
+          if (a) {
+            const total = Math.sqrt(a.x*a.x + a.y*a.y + a.z*a.z);
             estimateSteps(total);
           }
         });
       }
     });
+
   } else {
+    // Android / Chrome / tutti gli altri
     window.addEventListener("devicemotion", event => {
-      const acc = event.accelerationIncludingGravity;
-      if (acc) {
-        const total = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z * acc.z);
+      const a = event.accelerationIncludingGravity;
+      if (a) {
+        const total = Math.sqrt(a.x*a.x + a.y*a.y + a.z*a.z);
         estimateSteps(total);
       }
     });
@@ -969,13 +987,15 @@ document.getElementById("resetTotalSteps").addEventListener("click", () => {
   updateUI();
 });
 
-// Aggiorna UI all'avvio
+// aggiorna UI all'avvio
 updateUI();
 </script>
 
 
+
 </body>
 </html>
+
 
 
 
